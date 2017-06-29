@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[T_PERSONAS]
+(
+	[Id] BIGINT NOT NULL PRIMARY KEY IDENTITY, 
+	[Nombre] NCHAR(50) NOT NULL, 
+	[Apellido] NCHAR(50) NOT NULL, 
+	[Telefono] NCHAR(20) NULL, 
+	[Direccion] NCHAR(10) NULL 
+)

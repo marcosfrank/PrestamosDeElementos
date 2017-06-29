@@ -50,3 +50,6 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+[Bb]in*/
+[Oo]bj*/
+*.suo
