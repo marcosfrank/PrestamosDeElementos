@@ -49,9 +49,9 @@ namespace PDE.Site.Models
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "Email")]
+        [Display(Name = "Nombre de Usuario")]
         [EmailAddress]
-        public string Email { get; set; }
+        public string NombreUsuario { get; set; }
 
         [Required]
         [DataType(DataType.Password)]

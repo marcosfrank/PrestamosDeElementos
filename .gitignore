@@ -53,3 +53,4 @@ dkms.conf
 [Bb]in*/
 [Oo]bj*/
 *.suo
+*.dbmdl

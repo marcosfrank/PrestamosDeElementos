@@ -15,5 +15,6 @@ namespace PDE.DataAccess
         public DbSet<Categoria> Categorias { get; set; }
         public DbSet<Elemento> Elementos { get; set; }
         public DbSet<Prestamo> Prestamos { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
     }
 }

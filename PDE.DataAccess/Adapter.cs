@@ -6,14 +6,9 @@ using System.Threading.Tasks;
 
 namespace PDE.DataAccess
 {
-    public class Adapter
+    public abstract class Adapter
     {
-        public void IntialDB()
-        {
-            using (var db = new PDEContext())
-            {
-                db.Categorias.ToList();
-            }
-        }
+        
+        
     }
 }
