@@ -9,6 +9,5 @@ namespace PDE.DataAccess
     public abstract class Adapter
     {
         
-        
     }
 }

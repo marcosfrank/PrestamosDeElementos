@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PDE.Entities
 {
+    [Table("Elementos")]
     public class Elemento : AbstractaEntidad
     {
         public virtual Categoria Categoria { get; set; }

@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 
 namespace PDE.DataAccess
 {
     public class UsuarioAdapter : Adapter
     {
-        public Boolean Login(string nombreUsuario, string contrasena)
+        public bool Login(string nombreUsuario, string contrasena)
         {
             bool ret = false;
 

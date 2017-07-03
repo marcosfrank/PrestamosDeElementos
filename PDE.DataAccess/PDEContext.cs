@@ -1,16 +1,16 @@
-﻿using PDE.Entities;
-using System;
-using System.Collections.Generic;
+﻿using PDE.DataAccess.Migrations;
+using PDE.Entities;
 using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PDE.DataAccess
 {
     public class PDEContext : DbContext
     {
-        public PDEContext() : base("PDE") { }
+        public PDEContext() : base("PDE")
+        {
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<PDEContext, Configuration>("PDE"));
+        }
+
         public DbSet<Persona> Personas { get; set; }
         public DbSet<Categoria> Categorias { get; set; }
         public DbSet<Elemento> Elementos { get; set; }
