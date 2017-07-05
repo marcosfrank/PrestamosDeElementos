@@ -5,10 +5,10 @@ using System.Linq;
 namespace PDE.Site.Tests
 {
     [TestClass]
-    public class UnitTest1
+    public class DbContextTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void GetUsuarios()
         {
             using (var db = new PDEContext())
             {

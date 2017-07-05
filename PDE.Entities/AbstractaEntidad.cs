@@ -8,5 +8,10 @@ namespace PDE.Entities
         public virtual string Descripcion { get; set; }
 
         public DateTime FechaCreacion { get; set; }
+
+        public AbstractaEntidad()
+        {
+            FechaCreacion = DateTime.Now;
+        }
     }
 }

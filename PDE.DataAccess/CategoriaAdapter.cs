@@ -1,17 +1,17 @@
-﻿using System;
+﻿using PDE.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using PDE.Entities;
 
 namespace PDE.DataAccess
 {
-    public class UsuarioAdapter : IAdapter<Usuario>
+    public class CategoriaAdapter : IAdapter<Categoria>
     {
-        public void Add(Usuario entity)
+        public void Add(Categoria entity)
         {
             using (var db = new PDEContext())
             {
-                db.Usuarios.Add(entity);
+                db.Categorias.Add(entity);
                 db.SaveChanges();
             }
         }
@@ -24,11 +24,11 @@ namespace PDE.DataAccess
             {
                 using (var db = new PDEContext())
                 {
-                    var entity = db.Usuarios.FirstOrDefault(x => x.Id == id);
+                    var entity = db.Categorias.FirstOrDefault(x => x.Id == id);
 
                     if (entity != null)
                     {
-                        db.Usuarios.Remove(entity);
+                        db.Categorias.Remove(entity);
                         db.SaveChanges();
                         result = true;
                     }
@@ -36,47 +36,35 @@ namespace PDE.DataAccess
             }
             catch (Exception ex)
             {
-                
+
             }
 
             return result;
         }
 
-        public List<Usuario> GetAll()
+        public List<Categoria> GetAll()
         {
             using (var db = new PDEContext())
             {
-                return db.Usuarios.ToList();
+                return db.Categorias.ToList();
             }
         }
 
-        public Usuario GetOne(long id)
+        public Categoria GetOne(long id)
         {
             using (var db = new PDEContext())
             {
-                return db.Usuarios.FirstOrDefault(x => x.Id == id);
+                return db.Categorias.FirstOrDefault(x => x.Id == id);
             }
         }
 
-        public bool Login(string nombreUsuario, string contrasena)
-        {
-            bool ret = false;
-
-            using (var db = new PDEContext())
-            {
-                db.Usuarios.Count(x=> x.NombreUsuario == nombreUsuario && x.Contrasena == contrasena);
-            }
-
-            return ret;
-        }
-
-        public void Update(Usuario entity)
+        public void Update(Categoria entity)
         {
             try
             {
                 using (var db = new PDEContext())
                 {
-                    db.Usuarios.Attach(entity);
+                    db.Categorias.Attach(entity);
                     db.SaveChanges();
                 }
             }

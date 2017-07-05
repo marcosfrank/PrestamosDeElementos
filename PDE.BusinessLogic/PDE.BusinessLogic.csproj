@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractaLogic.cs" />
+    <Compile Include="CategoriaLogic.cs" />
+    <Compile Include="ILogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsuarioLogic.cs" />
   </ItemGroup>
@@ -48,6 +50,10 @@
     <ProjectReference Include="..\PDE.DataAccess\PDE.DataAccess.csproj">
       <Project>{733361d4-1e19-4721-a118-95e61da9267c}</Project>
       <Name>PDE.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PDE.Entities\PDE.Entities.csproj">
+      <Project>{FE14FBE3-B952-40E5-830B-9B21B23ED051}</Project>
+      <Name>PDE.Entities</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

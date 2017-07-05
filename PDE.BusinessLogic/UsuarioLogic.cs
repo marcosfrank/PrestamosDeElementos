@@ -1,15 +1,18 @@
 ﻿using PDE.DataAccess;
+using PDE.Entities;
 
 namespace PDE.BusinessLogic
 {
-    public class UsuarioLogic : AbstractaLogic
+    public class UsuarioLogic : AbstractaLogic<Usuario>
     {
-        UsuarioAdapter adapter = new UsuarioAdapter();
+        public UsuarioLogic()
+        {
+            Adapter = new UsuarioAdapter();
+        }
 
         public bool Login(string userName, string contrasena)
         {
-            return adapter.Login(userName, contrasena);
+            return ((UsuarioAdapter)Adapter).Login(userName, contrasena);
         }
-        
     }
 }

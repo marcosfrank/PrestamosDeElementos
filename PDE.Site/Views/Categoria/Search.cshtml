@@ -1,0 +1,37 @@
+﻿@model PDE.Entities.Categoria
+@{
+    ViewBag.Title = "Detalles";
+}
+
+<h2>Detalles</h2>
+
+@if (Model != null)
+{
+    <div>
+        <h4>Categoria</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Descripcion)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.FechaCreacion)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.FechaCreacion)
+            </dd>
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Editar", "Update", new { id = Model.Id }) |
+        @Html.ActionLink("Volver", "Index")
+    </p>
+}
+else
+{
+    <p>No se encontró la categoría solicitada</p>
+    @Html.ActionLink("Volver", "Index")
+}
