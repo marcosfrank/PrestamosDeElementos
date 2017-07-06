@@ -54,3 +54,8 @@ dkms.conf
 [Oo]bj*/
 *.suo
 *.dbmdl
+
+.vs/
+packages/
+node_modules/
+*.user
