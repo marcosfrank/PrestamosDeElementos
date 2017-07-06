@@ -1,7 +1,6 @@
-﻿using System;
+﻿using PDE.Entities;
 using System.Collections.Generic;
 using System.Linq;
-using PDE.Entities;
 
 namespace PDE.DataAccess
 {
@@ -34,10 +33,7 @@ namespace PDE.DataAccess
                     }
                 }
             }
-            catch (Exception ex)
-            {
-                
-            }
+            catch { }
 
             return result;
         }
@@ -72,17 +68,10 @@ namespace PDE.DataAccess
 
         public void Update(Usuario entity)
         {
-            try
+            using (var db = new PDEContext())
             {
-                using (var db = new PDEContext())
-                {
-                    db.Usuarios.Attach(entity);
-                    db.SaveChanges();
-                }
-            }
-            catch (Exception ex)
-            {
-                throw ex;
+                db.Usuarios.Attach(entity);
+                db.SaveChanges();
             }
         }
     }

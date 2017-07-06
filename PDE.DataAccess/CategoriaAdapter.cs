@@ -34,10 +34,7 @@ namespace PDE.DataAccess
                     }
                 }
             }
-            catch (Exception ex)
-            {
-
-            }
+            catch { }
 
             return result;
         }
@@ -60,17 +57,10 @@ namespace PDE.DataAccess
 
         public void Update(Categoria entity)
         {
-            try
+            using (var db = new PDEContext())
             {
-                using (var db = new PDEContext())
-                {
-                    db.Categorias.Attach(entity);
-                    db.SaveChanges();
-                }
-            }
-            catch (Exception ex)
-            {
-                throw ex;
+                db.Categorias.Attach(entity);
+                db.SaveChanges();
             }
         }
     }

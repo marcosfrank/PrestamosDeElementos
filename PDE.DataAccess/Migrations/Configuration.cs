@@ -7,6 +7,7 @@ namespace PDE.DataAccess.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
+            AutomaticMigrationDataLossAllowed = true;
             ContextKey = "PDE.DataAccess.PDEContext";
         }
 
