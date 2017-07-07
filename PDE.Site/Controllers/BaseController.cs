@@ -2,7 +2,7 @@
 using PDE.Entities;
 using System.Web.Http;
 
-namespace PDE.Site.API.Controllers
+namespace PDE.Site.Controllers
 {
     public abstract class BaseController<TEntity> : ApiController where TEntity : AbstractaEntidad, new()
     {

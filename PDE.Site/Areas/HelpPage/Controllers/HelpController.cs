@@ -1,9 +1,9 @@
 using System;
 using System.Web.Http;
 using System.Web.Mvc;
-using PDE.Site.API.Areas.HelpPage.Models;
+using PDE.Site.Areas.HelpPage.Models;
 
-namespace PDE.Site.API.Areas.HelpPage.Controllers
+namespace PDE.Site.Areas.HelpPage.Controllers
 {
     /// <summary>
     /// The controller that will handle requests for the help page.

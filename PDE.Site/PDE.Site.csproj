@@ -211,7 +211,12 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="src\app\app.component.ts" />
+    <TypeScriptCompile Include="src\app\app.service.ts" />
     <TypeScriptCompile Include="src\app\app.module.ts" />
+    <TypeScriptCompile Include="src\app\categoria\lista.component.ts" />
+    <TypeScriptCompile Include="src\app\categoria\categoria.ts" />
+    <TypeScriptCompile Include="src\app\categoria\categoria.module.ts" />
+    <TypeScriptCompile Include="src\app\util\menu.component.ts" />
     <TypeScriptCompile Include="src\main.ts" />
   </ItemGroup>
   <ItemGroup>

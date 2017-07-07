@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace PDE.Site.API
+namespace PDE.Site
 {
     public class RouteConfig
     {

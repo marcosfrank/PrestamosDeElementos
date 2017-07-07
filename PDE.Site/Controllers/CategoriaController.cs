@@ -1,7 +1,7 @@
 ﻿using PDE.BusinessLogic;
 using PDE.Entities;
 
-namespace PDE.Site.API.Controllers
+namespace PDE.Site.Controllers
 {
     public class CategoriaController : BaseController<Categoria>
     {

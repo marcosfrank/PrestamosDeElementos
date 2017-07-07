@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace PDE.Site.API.Controllers
+namespace PDE.Site.Controllers
 {
     public class HomeController : Controller
     {

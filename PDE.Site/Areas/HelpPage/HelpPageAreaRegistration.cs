@@ -1,7 +1,7 @@
 using System.Web.Http;
 using System.Web.Mvc;
 
-namespace PDE.Site.API.Areas.HelpPage
+namespace PDE.Site.Areas.HelpPage
 {
     public class HelpPageAreaRegistration : AreaRegistration
     {
