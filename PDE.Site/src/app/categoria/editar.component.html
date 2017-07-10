@@ -1,7 +1,7 @@
 ﻿<h1 class="page-header">
     Categorías <small>Editar</small>
 </h1>
-<form (ngSubmit)="save()" #categoriaForm="ngForm">
+<form (ngSubmit)="save(categoria)" #categoriaForm="ngForm">
     <div class="form-group">
         <label for="Descripcion">Descripcion</label>
         <input type="text" class="form-control" id="Descripcion" required [(ngModel)]="categoria.Descripcion" name="Descripcion"

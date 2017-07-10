@@ -1,6 +1,6 @@
 ﻿using PDE.Entities;
-using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 
 namespace PDE.DataAccess
@@ -59,7 +59,8 @@ namespace PDE.DataAccess
         {
             using (var db = new PDEContext())
             {
-                db.Categorias.Attach(entity);
+                //db.Categorias.Attach(entity);
+                db.Entry(entity).State = EntityState.Modified;
                 db.SaveChanges();
             }
         }
