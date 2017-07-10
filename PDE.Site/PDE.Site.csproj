@@ -126,6 +126,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Persona\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -149,6 +150,7 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\CategoriaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PersonaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -194,6 +196,8 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="src\app\persona\persona-lista\persona-lista.component.css" />
+    <Content Include="src\app\persona\persona-lista\persona-lista.component.html" />
     <Content Include="src\favicon.ico" />
     <Content Include="src\app\categoria\editar.component.html" />
     <Content Include="src\app\categoria\lista.component.html" />
@@ -233,6 +237,9 @@
     <TypeScriptCompile Include="src\app\categoria\lista.component.ts" />
     <TypeScriptCompile Include="src\app\categoria\categoria.ts" />
     <TypeScriptCompile Include="src\app\categoria\categoria.module.ts" />
+    <TypeScriptCompile Include="src\app\persona\persona-lista\persona-lista.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\persona\persona-lista\persona-lista.component.ts" />
+    <TypeScriptCompile Include="src\app\persona\persona.ts" />
     <TypeScriptCompile Include="src\app\util\menu.component.ts" />
     <TypeScriptCompile Include="src\environments\environment.prod.ts" />
     <TypeScriptCompile Include="src\environments\environment.ts" />

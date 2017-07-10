@@ -6,13 +6,14 @@ import { MenuComponent }            from './util/menu.component';
 import { CategoriaModule }          from './categoria/categoria.module';
 import { ListaCategoriasComponent } from './categoria/lista.component';
 import { EditarCategoriaComponent } from './categoria/editar.component';
+import { PersonaListaComponent } from './persona/persona-lista/persona-lista.component';
 
 const appRoutes: Routes = [
     { path: 'Categorias/lista', component: ListaCategoriasComponent },
     //{ path: ':modulo/detalles/:id', component: DetalleCategoriaComponent },
     //{ path: ':modulo/crear', component: CrearCategoriaComponent },
     { path: 'Categorias/editar/:id', component: EditarCategoriaComponent },
-    //{ path: ':modulo/eliminar/:id', component: EliminarCategoriaComponent },
+    { path: 'Personas/lista', component: PersonaListaComponent },
     //{
     //    path: 'heroes',
     //    component: HeroListComponent,
@@ -28,7 +29,7 @@ const appRoutes: Routes = [
 
 @NgModule({
     imports: [BrowserModule, CategoriaModule, RouterModule.forRoot(appRoutes) ],
-    declarations: [ AppComponent, MenuComponent ],
+    declarations: [ AppComponent, MenuComponent, PersonaListaComponent ],
     bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

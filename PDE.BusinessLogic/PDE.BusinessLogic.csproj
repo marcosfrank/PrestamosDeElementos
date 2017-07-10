@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractaLogic.cs" />
+    <Compile Include="PersonaLogic.cs" />
     <Compile Include="CategoriaLogic.cs" />
     <Compile Include="ILogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
