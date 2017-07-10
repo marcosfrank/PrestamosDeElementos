@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PersonaAdapter.cs" />
     <Compile Include="CategoriaAdapter.cs" />
     <Compile Include="IAdapter.cs" />
     <Compile Include="Migrations\Configuration.cs" />
