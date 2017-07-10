@@ -229,6 +229,7 @@
     <TypeScriptCompile Include="src\app\app.component.ts" />
     <TypeScriptCompile Include="src\app\app.service.ts" />
     <TypeScriptCompile Include="src\app\app.module.ts" />
+    <TypeScriptCompile Include="src\app\categoria\crear.component.ts" />
     <TypeScriptCompile Include="src\app\categoria\editar.component.ts" />
     <TypeScriptCompile Include="src\app\categoria\lista.component.ts" />
     <TypeScriptCompile Include="src\app\categoria\categoria.ts" />

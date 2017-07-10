@@ -6,11 +6,12 @@ import { MenuComponent }            from './util/menu.component';
 import { CategoriaModule }          from './categoria/categoria.module';
 import { ListaCategoriasComponent } from './categoria/lista.component';
 import { EditarCategoriaComponent } from './categoria/editar.component';
+import { CrearCategoriaComponent }  from './categoria/crear.component';
 
 const appRoutes: Routes = [
     { path: 'Categorias/lista', component: ListaCategoriasComponent },
     //{ path: ':modulo/detalles/:id', component: DetalleCategoriaComponent },
-    //{ path: ':modulo/crear', component: CrearCategoriaComponent },
+    { path: 'Categorias/crear', component: CrearCategoriaComponent },
     { path: 'Categorias/editar/:id', component: EditarCategoriaComponent },
     //{ path: ':modulo/eliminar/:id', component: EliminarCategoriaComponent },
     //{

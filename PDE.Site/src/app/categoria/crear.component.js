@@ -13,41 +13,33 @@ var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var categoria_1 = require("./categoria");
 var app_service_1 = require("../app.service");
-var EditarCategoriaComponent = (function () {
-    function EditarCategoriaComponent(route, router, service) {
+var CrearCategoriaComponent = (function () {
+    function CrearCategoriaComponent(route, router, service) {
         this.route = route;
         this.router = router;
         this.service = service;
     }
-    EditarCategoriaComponent.prototype.getCategoria = function (id) {
+    CrearCategoriaComponent.prototype.save = function (categoria) {
         var _this = this;
-        this.service.getOne('Categoria', id)
-            .then(function (categoria) { return _this.categoria = categoria; })
+        this.service.add('Categoria', categoria)
+            .then(function (categoria) {
+            _this.categoria = categoria;
+            _this.router.navigate(['/Categorias/lista']);
+        })
             .catch(function () { return alert('Error al consumir servicio'); });
     };
-    EditarCategoriaComponent.prototype.save = function (categoria) {
-        var _this = this;
-        this.service.update('Categoria', categoria)
-            .then(function (categoria) { return _this.categoria = categoria; })
-            .catch(function () { return alert('Error al consumir servicio'); });
-    };
-    EditarCategoriaComponent.prototype.ngOnInit = function () {
-        //this.route.paramMap
-        //    .switchMap((params: ParamMap) => this.getCategoria(+params.get('id')))
-        //    .subscribe((categoria: Categoria) => this.categoria = categoria);
+    CrearCategoriaComponent.prototype.ngOnInit = function () {
         this.categoria = new categoria_1.Categoria();
-        var id = this.route.snapshot.paramMap.get('id');
-        this.getCategoria(+id);
     };
-    EditarCategoriaComponent = __decorate([
+    CrearCategoriaComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
             providers: [app_service_1.Service],
             templateUrl: './editar.component.html',
         }),
         __metadata("design:paramtypes", [router_1.ActivatedRoute, router_1.Router, app_service_1.Service])
-    ], EditarCategoriaComponent);
-    return EditarCategoriaComponent;
+    ], CrearCategoriaComponent);
+    return CrearCategoriaComponent;
 }());
-exports.EditarCategoriaComponent = EditarCategoriaComponent;
-//# sourceMappingURL=editar.component.js.map
+exports.CrearCategoriaComponent = CrearCategoriaComponent;
+//# sourceMappingURL=crear.component.js.map
