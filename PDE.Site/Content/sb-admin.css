@@ -1,5 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
-=======
+/*!
+ * Start Bootstrap - SB Admin (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+/* Global Styles */
+
 body {
     margin-top: 100px;
     background-color: #222;
@@ -219,4 +225,3 @@ ul.alert-dropdown {
 .panel-yellow > a:hover {
     color: #df8a13;
 }
-

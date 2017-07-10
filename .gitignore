@@ -55,8 +55,8 @@ dkms.conf
 *.suo
 *.dbmdl
 
-.vs/
-packages/
+.vs*/
+packages*/
 node_modules/
 *.user
 /PDE.Database/PDE.Database.jfm

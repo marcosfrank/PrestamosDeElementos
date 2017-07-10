@@ -29,7 +29,7 @@ var Service = (function () {
     Service.prototype.getOne = function (url, id) {
         return this.http.request(new http_1.Request({
             method: http_1.RequestMethod.Get,
-            url: this.baseUrl + url
+            url: this.baseUrl + url + '/' + id
         })).toPromise()
             .then(function (response) { return response.json(); })
             .catch(this.handleError);

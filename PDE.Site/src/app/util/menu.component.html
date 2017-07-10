@@ -1,0 +1,9 @@
+﻿<div class="collapse navbar-collapse navbar-ex1-collapse">
+    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+    <ul id="menu-content" class="nav navbar-nav side-nav">
+        <li *ngFor="let modulo of modulos">
+            <a routerLink="{{ modulo + '/lista/' }}">
+                <i class="fa fa-fw fa-cog"></i> {{ modulo }}</a>
+        </li>
+    </ul>
+</div>
