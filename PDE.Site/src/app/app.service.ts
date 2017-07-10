@@ -52,7 +52,7 @@ export class Service<T> {
     delete(url: string, id: number): Promise<void> {
         return this.http.request(new Request({
             method: RequestMethod.Delete,
-            url: this.baseUrl + url,
+            url: this.baseUrl + url + '/' + id,
             headers: this.headers
         })).toPromise()
             .then(() => null)

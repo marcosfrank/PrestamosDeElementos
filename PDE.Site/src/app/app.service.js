@@ -57,7 +57,7 @@ var Service = (function () {
     Service.prototype.delete = function (url, id) {
         return this.http.request(new http_1.Request({
             method: http_1.RequestMethod.Delete,
-            url: this.baseUrl + url,
+            url: this.baseUrl + url + '/' + id,
             headers: this.headers
         })).toPromise()
             .then(function () { return null; })
