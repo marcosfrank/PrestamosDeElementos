@@ -21,14 +21,14 @@ export class EditarCategoriaComponent implements OnInit {
 
     save(categoria: Categoria): void {
         this.service.update('Categoria', categoria)
-            .then(categoria => this.categoria = categoria)
+            .then(categoria => {
+                this.categoria = categoria;
+                this.router.navigate(['/Categorias/lista']);
+            })
             .catch(() => alert('Error al consumir servicio'));
     }
 
     ngOnInit(): void {
-        //this.route.paramMap
-        //    .switchMap((params: ParamMap) => this.getCategoria(+params.get('id')))
-        //    .subscribe((categoria: Categoria) => this.categoria = categoria);
         this.categoria = new Categoria();
         let id = this.route.snapshot.paramMap.get('id');
         this.getCategoria(+id);

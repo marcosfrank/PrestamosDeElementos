@@ -28,13 +28,13 @@ var EditarCategoriaComponent = (function () {
     EditarCategoriaComponent.prototype.save = function (categoria) {
         var _this = this;
         this.service.update('Categoria', categoria)
-            .then(function (categoria) { return _this.categoria = categoria; })
+            .then(function (categoria) {
+            _this.categoria = categoria;
+            _this.router.navigate(['/Categorias/lista']);
+        })
             .catch(function () { return alert('Error al consumir servicio'); });
     };
     EditarCategoriaComponent.prototype.ngOnInit = function () {
-        //this.route.paramMap
-        //    .switchMap((params: ParamMap) => this.getCategoria(+params.get('id')))
-        //    .subscribe((categoria: Categoria) => this.categoria = categoria);
         this.categoria = new categoria_1.Categoria();
         var id = this.route.snapshot.paramMap.get('id');
         this.getCategoria(+id);
