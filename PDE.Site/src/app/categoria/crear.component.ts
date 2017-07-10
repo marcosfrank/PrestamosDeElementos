@@ -10,7 +10,7 @@ import { Service }                          from '../app.service';
 })
 export class CrearCategoriaComponent implements OnInit {
     categoria: Categoria;
-    title: 'Crear';
+    title: string;
 
     constructor(private route: ActivatedRoute, private router: Router, private service: Service<Categoria>) { }
     
@@ -25,5 +25,6 @@ export class CrearCategoriaComponent implements OnInit {
 
     ngOnInit(): void {
         this.categoria = new Categoria();
+        this.title = 'Crear';
     }
 }

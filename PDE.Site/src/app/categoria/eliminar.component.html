@@ -1,0 +1,18 @@
+﻿<h1 class="page-header">
+    Categorías <small>Eliminar</small>
+</h1>
+<h3>¿Esta seguro de querer eliminar esta categoría?</h3>
+<div>
+    <dl class="dl-horizontal">
+        <dt>Descripción</dt>
+        <dd>{{ categoria.Descripcion }}</dd>
+        <dt>Fecha de Creación</dt>
+        <dd>{{ categoria.FechaCreacion | date: 'dd/MM/yyyy' }}</dd>
+    </dl>
+    <form (ngSubmit)="delete(categoria)">
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            <a routerLink="/Categorias/lista">Volver</a>
+        </div>
+    </form>
+</div>

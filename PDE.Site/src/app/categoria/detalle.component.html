@@ -1,0 +1,15 @@
+﻿<h1 class="page-header">
+    Categorías <small>Detalle</small>
+</h1>
+<div>
+    <dl class="dl-horizontal">
+        <dt>Descripción</dt>
+        <dd>{{ categoria.Descripcion }}</dd>
+        <dt>Fecha de Creación</dt>
+        <dd>{{ categoria.FechaCreacion | date: 'dd/MM/yyyy' }}</dd>
+    </dl>
+</div>
+<p>
+    <a [routerLink]="['/Categorias/editar', categoria.Id ]">Editar</a> |
+    <a routerLink="/Categorias/lista">Volver</a>
+</p>

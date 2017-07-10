@@ -5,5 +5,4 @@
     Telefono: string;
     Direccion: string;
     FechaCreacion: Date;
-
 }

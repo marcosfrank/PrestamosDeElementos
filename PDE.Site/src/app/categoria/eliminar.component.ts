@@ -6,11 +6,10 @@ import { Service }                          from '../app.service';
 @Component({
     selector: 'my-app',
     providers: [Service],
-    templateUrl: './editar.component.html',
+    templateUrl: './eliminar.component.html',
 })
-export class EditarCategoriaComponent implements OnInit {
+export class EliminarCategoriaComponent implements OnInit {
     categoria: Categoria;
-    title: string;
 
     constructor(private route: ActivatedRoute, private router: Router, private service: Service<Categoria>) { }
     
@@ -20,17 +19,13 @@ export class EditarCategoriaComponent implements OnInit {
             .catch(() => alert('Error al consumir servicio'));
     }
 
-    save(categoria: Categoria): void {
-        this.service.update('Categoria', categoria)
-            .then(categoria => {
-                this.categoria = categoria;
-                this.router.navigate(['/Categorias/lista']);
-            })
+    delete(categoria: Categoria): void {
+        this.service.delete('Categoria', categoria.Id)
+            .then(() => null)
             .catch(() => alert('Error al consumir servicio'));
     }
 
     ngOnInit(): void {
-        this.title = 'Editar';
         this.categoria = new Categoria();
         let id = this.route.snapshot.paramMap.get('id');
         this.getCategoria(+id);

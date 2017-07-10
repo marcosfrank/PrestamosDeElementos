@@ -196,6 +196,8 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="src\app\categoria\eliminar.component.html" />
+    <Content Include="src\app\categoria\detalle.component.html" />
     <Content Include="src\app\persona\persona-lista\persona-lista.component.css" />
     <Content Include="src\app\persona\persona-lista\persona-lista.component.html" />
     <Content Include="src\favicon.ico" />
@@ -234,12 +236,15 @@
     <TypeScriptCompile Include="src\app\app.service.ts" />
     <TypeScriptCompile Include="src\app\app.module.ts" />
     <TypeScriptCompile Include="src\app\categoria\crear.component.ts" />
+    <TypeScriptCompile Include="src\app\categoria\eliminar.component.ts" />
+    <TypeScriptCompile Include="src\app\categoria\detalle.component.ts" />
     <TypeScriptCompile Include="src\app\categoria\editar.component.ts" />
     <TypeScriptCompile Include="src\app\categoria\lista.component.ts" />
     <TypeScriptCompile Include="src\app\categoria\categoria.ts" />
     <TypeScriptCompile Include="src\app\categoria\categoria.module.ts" />
     <TypeScriptCompile Include="src\app\persona\persona-lista\persona-lista.component.spec.ts" />
     <TypeScriptCompile Include="src\app\persona\persona-lista\persona-lista.component.ts" />
+    <TypeScriptCompile Include="src\app\persona\persona.module.ts" />
     <TypeScriptCompile Include="src\app\persona\persona.ts" />
     <TypeScriptCompile Include="src\app\util\menu.component.ts" />
     <TypeScriptCompile Include="src\environments\environment.prod.ts" />

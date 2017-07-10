@@ -35,6 +35,7 @@ var EditarCategoriaComponent = (function () {
             .catch(function () { return alert('Error al consumir servicio'); });
     };
     EditarCategoriaComponent.prototype.ngOnInit = function () {
+        this.title = 'Editar';
         this.categoria = new categoria_1.Categoria();
         var id = this.route.snapshot.paramMap.get('id');
         this.getCategoria(+id);

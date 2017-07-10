@@ -13,34 +13,32 @@ var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var categoria_1 = require("./categoria");
 var app_service_1 = require("../app.service");
-var CrearCategoriaComponent = (function () {
-    function CrearCategoriaComponent(route, router, service) {
+var DetalleCategoriaComponent = (function () {
+    function DetalleCategoriaComponent(route, router, service) {
         this.route = route;
         this.router = router;
         this.service = service;
     }
-    CrearCategoriaComponent.prototype.save = function (categoria) {
+    DetalleCategoriaComponent.prototype.getCategoria = function (id) {
         var _this = this;
-        this.service.add('Categoria', categoria)
-            .then(function (categoria) {
-            _this.categoria = categoria;
-            _this.router.navigate(['/Categorias/lista']);
-        })
+        this.service.getOne('Categoria', id)
+            .then(function (categoria) { return _this.categoria = categoria; })
             .catch(function () { return alert('Error al consumir servicio'); });
     };
-    CrearCategoriaComponent.prototype.ngOnInit = function () {
+    DetalleCategoriaComponent.prototype.ngOnInit = function () {
         this.categoria = new categoria_1.Categoria();
-        this.title = 'Crear';
+        var id = this.route.snapshot.paramMap.get('id');
+        this.getCategoria(+id);
     };
-    CrearCategoriaComponent = __decorate([
+    DetalleCategoriaComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
             providers: [app_service_1.Service],
-            templateUrl: './editar.component.html',
+            templateUrl: './detalle.component.html',
         }),
         __metadata("design:paramtypes", [router_1.ActivatedRoute, router_1.Router, app_service_1.Service])
-    ], CrearCategoriaComponent);
-    return CrearCategoriaComponent;
+    ], DetalleCategoriaComponent);
+    return DetalleCategoriaComponent;
 }());
-exports.CrearCategoriaComponent = CrearCategoriaComponent;
-//# sourceMappingURL=crear.component.js.map
+exports.DetalleCategoriaComponent = DetalleCategoriaComponent;
+//# sourceMappingURL=detalle.component.js.map

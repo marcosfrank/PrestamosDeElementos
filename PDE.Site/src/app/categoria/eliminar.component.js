@@ -13,34 +13,37 @@ var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var categoria_1 = require("./categoria");
 var app_service_1 = require("../app.service");
-var CrearCategoriaComponent = (function () {
-    function CrearCategoriaComponent(route, router, service) {
+var EliminarCategoriaComponent = (function () {
+    function EliminarCategoriaComponent(route, router, service) {
         this.route = route;
         this.router = router;
         this.service = service;
     }
-    CrearCategoriaComponent.prototype.save = function (categoria) {
+    EliminarCategoriaComponent.prototype.getCategoria = function (id) {
         var _this = this;
-        this.service.add('Categoria', categoria)
-            .then(function (categoria) {
-            _this.categoria = categoria;
-            _this.router.navigate(['/Categorias/lista']);
-        })
+        this.service.getOne('Categoria', id)
+            .then(function (categoria) { return _this.categoria = categoria; })
             .catch(function () { return alert('Error al consumir servicio'); });
     };
-    CrearCategoriaComponent.prototype.ngOnInit = function () {
-        this.categoria = new categoria_1.Categoria();
-        this.title = 'Crear';
+    EliminarCategoriaComponent.prototype.delete = function (categoria) {
+        this.service.delete('Categoria', categoria.Id)
+            .then(function () { return null; })
+            .catch(function () { return alert('Error al consumir servicio'); });
     };
-    CrearCategoriaComponent = __decorate([
+    EliminarCategoriaComponent.prototype.ngOnInit = function () {
+        this.categoria = new categoria_1.Categoria();
+        var id = this.route.snapshot.paramMap.get('id');
+        this.getCategoria(+id);
+    };
+    EliminarCategoriaComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
             providers: [app_service_1.Service],
-            templateUrl: './editar.component.html',
+            templateUrl: './eliminar.component.html',
         }),
         __metadata("design:paramtypes", [router_1.ActivatedRoute, router_1.Router, app_service_1.Service])
-    ], CrearCategoriaComponent);
-    return CrearCategoriaComponent;
+    ], EliminarCategoriaComponent);
+    return EliminarCategoriaComponent;
 }());
-exports.CrearCategoriaComponent = CrearCategoriaComponent;
-//# sourceMappingURL=crear.component.js.map
+exports.EliminarCategoriaComponent = EliminarCategoriaComponent;
+//# sourceMappingURL=eliminar.component.js.map

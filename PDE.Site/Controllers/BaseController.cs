@@ -30,7 +30,7 @@ namespace PDE.Site.Controllers
             if (ModelState.IsValid)
             {
                 Logic.Add(entity);
-                return Ok();
+                return Ok(entity);
             }
 
             return BadRequest();
