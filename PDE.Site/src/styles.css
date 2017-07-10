@@ -1,3 +1,5 @@
+/* You can add global styles to this file, and also import other style files */
+=======
 body {
     margin-top: 100px;
     background-color: #222;
@@ -217,3 +219,4 @@ ul.alert-dropdown {
 .panel-yellow > a:hover {
     color: #df8a13;
 }
+
