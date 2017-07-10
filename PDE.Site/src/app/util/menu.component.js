@@ -14,7 +14,7 @@ var MenuComponent = (function () {
     MenuComponent = __decorate([
         core_1.Component({
             selector: 'menu',
-            template: "<div>\n        <ul>\n            <li *ngFor=\"let modulo in modulos\">\n                {{ modulo }}\n                <ul>\n                    <li><a (click)=\"\">Nuevo</a></li>\n                    <li><a (click)=\"\">Editar</a></li>\n                    <li><a (click)=\"\">Eliminar</a></li>\n                    <li><a (click)=\"\">Listado</a></li>\n                </ul>\n            </li>\n        </ul>\n    </div>",
+            templateUrl: './menu.component.html',
         })
     ], MenuComponent);
     return MenuComponent;

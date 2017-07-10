@@ -21,7 +21,7 @@ export class Service<T> {
     getOne(url: string, id: number): Promise<T> {
         return this.http.request(new Request({
             method: RequestMethod.Get,
-            url: this.baseUrl + url
+            url: this.baseUrl + url + '/' + id
         })).toPromise()
             .then(response => response.json() as T)
             .catch(this.handleError);

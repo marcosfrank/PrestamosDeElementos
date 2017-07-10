@@ -1,0 +1,20 @@
+﻿<h1 class="page-header">
+    Categorías <small>Listado</small>
+</h1>
+<p><a href="#" (click)="Show('crear')">Crear</a></p>
+<table class="table">
+    <tr>
+        <th>Descripcion</th>
+        <th>Fecha de Creacion</th>
+        <th></th>
+    </tr>
+    <tr *ngFor="let item of categorias">
+        <td>{{ item.Descripcion }}</td>
+        <td>{{ item.FechaCreacion | date: 'dd/MM/yyyy' }}</td>
+        <td>
+            <a [routerLink]="['/Categorias/editar', item.Id ]">Editar</a> |
+            <a [routerLink]="['/Categorias/detalles', item.Id ]">Detalles</a> |
+            <a [routerLink]="['/Categorias/eliminar', item.Id ]">Eliminar</a>
+        </td>
+    </tr>
+</table>

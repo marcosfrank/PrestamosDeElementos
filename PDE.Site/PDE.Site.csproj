@@ -158,7 +158,10 @@
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\sb-admin.css" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.js" />
@@ -177,12 +180,19 @@
     <Content Include="package.json" />
     <Content Include="bs-config.json" />
     <Content Include=".editorconfig" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\FontAwesome.otf" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="src\app\categoria\editar.component.html" />
+    <Content Include="src\app\categoria\lista.component.html" />
+    <Content Include="src\app\util\menu.component.html" />
     <Content Include="src\index.html" />
     <Content Include="src\styles.css" />
     <Content Include="src\systemjs-angular-loader.js" />
@@ -208,11 +218,13 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="tslint.json" />
     <Content Include="src\tsconfig.json" />
+    <Content Include="src\app\app.component.html" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="src\app\app.component.ts" />
     <TypeScriptCompile Include="src\app\app.service.ts" />
     <TypeScriptCompile Include="src\app\app.module.ts" />
+    <TypeScriptCompile Include="src\app\categoria\editar.component.ts" />
     <TypeScriptCompile Include="src\app\categoria\lista.component.ts" />
     <TypeScriptCompile Include="src\app\categoria\categoria.ts" />
     <TypeScriptCompile Include="src\app\categoria\categoria.module.ts" />

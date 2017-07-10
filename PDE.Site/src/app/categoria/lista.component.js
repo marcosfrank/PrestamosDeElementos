@@ -28,7 +28,7 @@ var ListaCategoriasComponent = (function () {
         core_1.Component({
             selector: 'my-app',
             providers: [app_service_1.Service],
-            template: "<h2>Listado de categor&iacute;as</h2>\n        <p><a href=\"Create\">Crear</a></p>\n        <table class=\"table\">\n            <tr>\n                <th>Descripcion</th>\n                <th>Fecha de Creacion</th>\n                <th></th>\n            </tr>\n            <tr *ngFor=\"let item of categorias\">\n                <td>{{ item.Descripcion }}</td>\n                <td>{{ item.FechaCreacion | date: 'dd/MM/yyyy' }}</td>\n                <td>\n                    <a [href]=\"'Update/' + item.Id\">Editar</a> |\n                    <a [href]=\"'Search/' + item.Id\">Detalles</a> |\n                    <a [href]=\"'Remove/' + item.Id\">Eliminar</a>\n                </td>\n            </tr>\n        </table>",
+            templateUrl: './lista.component.html',
         }),
         __metadata("design:paramtypes", [app_service_1.Service])
     ], ListaCategoriasComponent);
