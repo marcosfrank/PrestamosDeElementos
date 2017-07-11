@@ -22,3 +22,13 @@
         </td>
     </tr>
 </table>
+<p>
+  persona-lista works!
+    <button md-button>Flat button</button>
+    <button md-raised-button>Raised button</button>
+</p>
+<div *ngFor="let item of personas">
+    <span>{{item.Nombre}}</span>
+    <span>{{item.Apellido}}</span>
+    <span><button>Click Me!</button></span>
+</div>
