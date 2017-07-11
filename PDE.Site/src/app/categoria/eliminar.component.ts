@@ -21,7 +21,7 @@ export class EliminarCategoriaComponent implements OnInit {
 
     delete(categoria: Categoria): void {
         this.service.delete('Categoria', categoria.Id)
-            .then(() => null)
+            .then(() => this.router.navigate(['/Categorias/lista']))
             .catch(() => alert('Error al consumir servicio'));
     }
 

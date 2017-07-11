@@ -26,8 +26,9 @@ var EliminarCategoriaComponent = (function () {
             .catch(function () { return alert('Error al consumir servicio'); });
     };
     EliminarCategoriaComponent.prototype.delete = function (categoria) {
+        var _this = this;
         this.service.delete('Categoria', categoria.Id)
-            .then(function () { return null; })
+            .then(function () { return _this.router.navigate(['/Categorias/lista']); })
             .catch(function () { return alert('Error al consumir servicio'); });
     };
     EliminarCategoriaComponent.prototype.ngOnInit = function () {
