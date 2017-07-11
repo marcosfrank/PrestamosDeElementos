@@ -1,0 +1,32 @@
+﻿<h1 class="page-header">
+    Personas <small>{{ title }}</small>
+</h1>
+<form (ngSubmit)="save(persona)" #personaForm="ngForm">
+    <div class="form-group">
+        <label for="Nombre">Nombre</label>
+        <input type="text" class="form-control" id="Nombre" required [(ngModel)]="persona.Nombre" name="Nombre"
+               #Nombre="ngModel">
+        <div [hidden]="Nombre.valid || Nombre.pristine" class="alert alert-danger">Debe completar el Nombre</div>
+    </div>
+    <div class="form-group">
+        <label for="Apellido">Apellido</label>
+        <input type="text" class="form-control" id="Apellido" required [(ngModel)]="persona.Apellido" name="Apellido"
+               #Apellido="ngModel">
+        <div [hidden]="Apellido.valid || Apellido.pristine" class="alert alert-danger">Debe completar el Apellido</div>
+    </div>
+    <div class="form-group">
+        <label for="Direccion">Dirección</label>
+        <input type="text" class="form-control" id="Direccion" required [(ngModel)]="persona.Direccion" name="Direccion"
+               #Direccion="ngModel">
+        <div [hidden]="Direccion.valid || Direccion.pristine" class="alert alert-danger">Debe completar la Dirección</div>
+    </div>
+    <div class="form-group">
+        <label for="Telefono">Teléfono</label>
+        <input type="text" class="form-control" id="Telefono" required [(ngModel)]="persona.Telefono" name="Telefono"
+               #Telefono="ngModel">
+        <div [hidden]="Telefono.valid || Telefono.pristine" class="alert alert-danger">Debe completar el Teléfono</div>
+    </div>
+
+    <button type="submit" class="btn btn-success" [disabled]="!personaForm.form.valid">Guardar</button>
+    <a routerLink="/Personas/lista">Volver</a>
+</form>

@@ -1,26 +1,27 @@
-import { NgModule }                 from '@angular/core';
-import { BrowserModule }            from '@angular/platform-browser';
-import { CommonModule }             from '@angular/common';
-import { HttpModule }               from '@angular/http';
-import { FormsModule }              from '@angular/forms';
-import { RouterModule }             from '@angular/router';
+import { NgModule }                   from '@angular/core';
+import { BrowserModule }              from '@angular/platform-browser';
+import { CommonModule }               from '@angular/common';
+import { HttpModule }                 from '@angular/http';
+import { FormsModule }                from '@angular/forms';
+import { RouterModule }               from '@angular/router';
 
-import { ListaCategoriasComponent } from './lista.component';
-import { DetalleCategoriaComponent } from './detalle.component';
-import { CrearCategoriaComponent }  from './crear.component';
-import { EditarCategoriaComponent } from './editar.component';
+import { ListaCategoriaComponent }    from './lista.component';
+import { DetalleCategoriaComponent }  from './detalle.component';
+import { CrearCategoriaComponent }    from './crear.component';
+import { EditarCategoriaComponent }   from './editar.component';
 import { EliminarCategoriaComponent } from './eliminar.component';
 
-import { Service }                  from '../app.service';
+import { Service }                    from '../app.service';
 
 @NgModule({
-    imports: [CommonModule, BrowserModule, HttpModule, FormsModule, RouterModule],
+    imports: [ CommonModule, BrowserModule, HttpModule, FormsModule, RouterModule ],
     declarations: [
-        ListaCategoriasComponent,
+        ListaCategoriaComponent,
         EditarCategoriaComponent,
         CrearCategoriaComponent,
         DetalleCategoriaComponent,
-        EliminarCategoriaComponent],
+        EliminarCategoriaComponent
+    ],
     providers: [ Service ]
 })
 export class CategoriaModule { }

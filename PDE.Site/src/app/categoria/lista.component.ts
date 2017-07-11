@@ -7,7 +7,7 @@ import { Service } from '../app.service';
     providers: [Service],
     templateUrl: './lista.component.html',
 })
-export class ListaCategoriasComponent implements OnInit {
+export class ListaCategoriaComponent implements OnInit {
     categorias: Categoria[];
 
     constructor(private categoriaService: Service<Categoria>) { }

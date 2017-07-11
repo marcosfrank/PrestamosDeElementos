@@ -10,29 +10,37 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
+var router_1 = require("@angular/router");
+var persona_1 = require("./persona");
 var app_service_1 = require("../app.service");
-var ListaCategoriaComponent = (function () {
-    function ListaCategoriaComponent(categoriaService) {
-        this.categoriaService = categoriaService;
+var PersonaCrearComponent = (function () {
+    function PersonaCrearComponent(route, router, service) {
+        this.route = route;
+        this.router = router;
+        this.service = service;
     }
-    ListaCategoriaComponent.prototype.getCategorias = function () {
+    PersonaCrearComponent.prototype.save = function (persona) {
         var _this = this;
-        this.categoriaService.getAll('Categoria')
-            .then(function (categorias) { return _this.categorias = categorias; })
+        this.service.add('Persona', persona)
+            .then(function (persona) {
+            _this.persona = persona;
+            _this.router.navigate(['/Personas/lista']);
+        })
             .catch(function () { return alert('Error al consumir servicio'); });
     };
-    ListaCategoriaComponent.prototype.ngOnInit = function () {
-        this.getCategorias();
+    PersonaCrearComponent.prototype.ngOnInit = function () {
+        this.persona = new persona_1.Persona();
+        this.title = 'Crear';
     };
-    ListaCategoriaComponent = __decorate([
+    PersonaCrearComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
             providers: [app_service_1.Service],
-            templateUrl: './lista.component.html',
+            templateUrl: './editar.component.html',
         }),
-        __metadata("design:paramtypes", [app_service_1.Service])
-    ], ListaCategoriaComponent);
-    return ListaCategoriaComponent;
+        __metadata("design:paramtypes", [router_1.ActivatedRoute, router_1.Router, app_service_1.Service])
+    ], PersonaCrearComponent);
+    return PersonaCrearComponent;
 }());
-exports.ListaCategoriaComponent = ListaCategoriaComponent;
-//# sourceMappingURL=lista.component.js.map
+exports.PersonaCrearComponent = PersonaCrearComponent;
+//# sourceMappingURL=crear.component.js.map

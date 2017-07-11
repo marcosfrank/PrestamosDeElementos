@@ -1,8 +1,24 @@
-<p>
-  persona-lista works!
-   
-</p>
-<div *ngFor="let item of personas">
-    <span>{{item.Nombre}}</span>
-    <span>{{item.Apellido}}</span>
-</div>
+<h1 class="page-header">
+    Personas <small>Listado</small>
+</h1>
+<p><a routerLink="/Personas/crear">Crear</a></p>
+<table class="table">
+    <tr>
+        <th>Nombre</th>
+        <th>Tel&eacute;fono</th>
+        <th>Direcci&oacute;n</th>
+        <th>Fecha de Creaci&oacute;n</th>
+        <th></th>
+    </tr>
+    <tr *ngFor="let item of personas">
+        <td>{{ item.Descripcion }}</td>
+        <td>{{ item.Telefono }}</td>
+        <td>{{ item.Direccion }}</td>
+        <td>{{ item.FechaCreacion | date: 'dd/MM/yyyy' }}</td>
+        <td>
+            <a [routerLink]="['/Personas/editar', item.Id ]">Editar</a> |
+            <a [routerLink]="['/Personas/detalles', item.Id ]">Detalles</a> |
+            <a [routerLink]="['/Personas/eliminar', item.Id ]">Eliminar</a>
+        </td>
+    </tr>
+</table>
