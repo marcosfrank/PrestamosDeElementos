@@ -9,14 +9,28 @@ import { MdButtonModule, MdCheckboxModule } from '@angular/material';
 import { PersonaListaComponent }            from './persona-lista/persona-lista.component';
 import { PersonaCrearComponent }            from './crear.component';
 import { PersonaEditarComponent }           from './editar.component';
-//import { PersonaDetalleComponent }        from './detalle.component';
-//import { PersonaEliminarComponent }       from './eliminar.component';
+import { PersonaDetalleComponent }          from './detalle.component';
+import { PersonaEliminarComponent }         from './eliminar.component';
 
 import { Service }                          from '../app.service';
 
 @NgModule({
-    imports:      [ CommonModule, BrowserModule, HttpModule, FormsModule, RouterModule, MdButtonModule, MdCheckboxModule ],
-    declarations: [ PersonaListaComponent, PersonaCrearComponent, PersonaEditarComponent ],
-    providers:    [ Service ]
+    imports: [
+        CommonModule,
+        BrowserModule,
+        HttpModule,
+        FormsModule,
+        RouterModule,
+        MdButtonModule,
+        MdCheckboxModule
+    ],
+    declarations: [
+        PersonaListaComponent,
+        PersonaDetalleComponent,
+        PersonaCrearComponent,
+        PersonaEditarComponent,
+        PersonaEliminarComponent
+    ],
+    providers: [ Service ]
 })
 export class PersonaModule { }

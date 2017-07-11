@@ -17,6 +17,8 @@ import { EliminarCategoriaComponent } from './categoria/eliminar.component';
 import { PersonaListaComponent }      from './persona/persona-lista/persona-lista.component';
 import { PersonaCrearComponent }      from './persona/crear.component';
 import { PersonaEditarComponent }     from './persona/editar.component';
+import { PersonaEliminarComponent } from './persona/eliminar.component';
+import { PersonaDetalleComponent } from './persona/detalle.component';
 
 const appRoutes: Routes = [
     { path: 'Categorias/lista', component: ListaCategoriaComponent },
@@ -28,6 +30,8 @@ const appRoutes: Routes = [
     { path: 'Personas/lista', component: PersonaListaComponent },
     { path: 'Personas/crear', component: PersonaCrearComponent },
     { path: 'Personas/editar/:id', component: PersonaEditarComponent },
+    { path: 'Personas/eliminar/:id', component: PersonaEliminarComponent },
+    { path: 'Personas/detalles/:id', component: PersonaDetalleComponent },
     //{
     //    path: 'heroes',
     //    component: HeroListComponent,

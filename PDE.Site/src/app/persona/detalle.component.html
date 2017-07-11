@@ -1,0 +1,19 @@
+﻿<h1 class="page-header">
+    Personas <small>Detalle</small>
+</h1>
+<div>
+    <dl class="dl-horizontal">
+        <dt>Nombre</dt>
+        <dd>{{ persona.Descripcion }}</dd>
+        <dt>Dirección</dt>
+        <dd>{{ persona.Direccion }}</dd>
+        <dt>Teléfono</dt>
+        <dd>{{ persona.Telefono }}</dd>
+        <dt>Fecha de Creación</dt>
+        <dd>{{ persona.FechaCreacion | date: 'dd/MM/yyyy' }}</dd>
+    </dl>
+</div>
+<p>
+    <a [routerLink]="['/Personas/editar', persona.Id ]">Editar</a> |
+    <a routerLink="/Personas/lista">Volver</a>
+</p>

@@ -1,0 +1,22 @@
+﻿<h1 class="page-header">
+    Personas <small>Eliminar</small>
+</h1>
+<h3>¿Esta seguro de querer eliminar esta persona?</h3>
+<div>
+    <dl class="dl-horizontal">
+        <dt>Nombre</dt>
+        <dd>{{ persona.Descripcion }}</dd>
+        <dt>Dirección</dt>
+        <dd>{{ persona.Direccion }}</dd>
+        <dt>Teléfono</dt>
+        <dd>{{ persona.Telefono }}</dd>
+        <dt>Fecha de Creación</dt>
+        <dd>{{ persona.FechaCreacion | date: 'dd/MM/yyyy' }}</dd>
+    </dl>
+    <form (ngSubmit)="delete(persona)">
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            <a routerLink="/Personas/lista">Volver</a>
+        </div>
+    </form>
+</div>
