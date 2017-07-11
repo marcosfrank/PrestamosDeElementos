@@ -8,7 +8,7 @@ import { Service }                          from '../app.service';
     providers: [Service],
     templateUrl: './eliminar.component.html',
 })
-export class EliminarCategoriaComponent implements OnInit {
+export class CategoriaEliminarComponent implements OnInit {
     categoria: Categoria;
 
     constructor(private route: ActivatedRoute, private router: Router, private service: Service<Categoria>) { }

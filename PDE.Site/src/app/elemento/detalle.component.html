@@ -1,0 +1,17 @@
+﻿<h1 class="page-header">
+    Elementos <small>Detalle</small>
+</h1>
+<div>
+    <dl class="dl-horizontal">
+        <dt>Descripción</dt>
+        <dd>{{ elemento.Descripcion }}</dd>
+        <dt>Categoría</dt>
+        <dd>{{ elemento.Categoria.Descripcion }}</dd>
+        <dt>Fecha de Creación</dt>
+        <dd>{{ elemento.FechaCreacion | date: 'dd/MM/yyyy' }}</dd>
+    </dl>
+</div>
+<p>
+    <a [routerLink]="['/Elementos/editar', elemento.Id ]">Editar</a> |
+    <a routerLink="/Elementos/lista">Volver</a>
+</p>

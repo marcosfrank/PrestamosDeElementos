@@ -5,22 +5,22 @@ import { HttpModule }                 from '@angular/http';
 import { FormsModule }                from '@angular/forms';
 import { RouterModule }               from '@angular/router';
 
-import { ListaCategoriaComponent }    from './lista.component';
-import { DetalleCategoriaComponent }  from './detalle.component';
-import { CrearCategoriaComponent }    from './crear.component';
-import { EditarCategoriaComponent }   from './editar.component';
-import { EliminarCategoriaComponent } from './eliminar.component';
+import { CategoriaListaComponent }    from './lista.component';
+import { CategoriaDetalleComponent }  from './detalle.component';
+import { CategoriaCrearComponent }    from './crear.component';
+import { CategoriaEditarComponent }   from './editar.component';
+import { CategoriaEliminarComponent } from './eliminar.component';
 
 import { Service }                    from '../app.service';
 
 @NgModule({
     imports: [ CommonModule, BrowserModule, HttpModule, FormsModule, RouterModule ],
     declarations: [
-        ListaCategoriaComponent,
-        EditarCategoriaComponent,
-        CrearCategoriaComponent,
-        DetalleCategoriaComponent,
-        EliminarCategoriaComponent
+        CategoriaListaComponent,
+        CategoriaDetalleComponent,
+        CategoriaCrearComponent,
+        CategoriaEditarComponent,
+        CategoriaEliminarComponent
     ],
     providers: [ Service ]
 })

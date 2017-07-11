@@ -1,0 +1,22 @@
+﻿<h1 class="page-header">
+    Elementos <small>{{ title }}</small>
+</h1>
+<form (ngSubmit)="save(elemento)" #elementoForm="ngForm">
+    <div class="form-group">
+        <label for="Descripcion">Descripción</label>
+        <input type="text" class="form-control" id="Descripcion" required [(ngModel)]="elemento.Descripcion" name="Descripcion"
+               #Descripcion="ngModel">
+        <div [hidden]="Descripcion.valid || Descripcion.pristine" class="alert alert-danger">Debe completar la Descripción</div>
+    </div>
+    <div class="form-group">
+        <label for="Categoria">Categoría</label>
+        <select class="form-control" id="Categoria" required [(ngModel)]="elemento.IdCategoria" name="Categoria" #Categoria="ngModel">
+            <option value="">Seleccione</option>
+            <option *ngFor="let item of categorias" [value]="item.Id">{{ item.Descripcion }}</option>
+        </select>
+        <div [hidden]="Categoria.valid || Categoria.pristine" class="alert alert-danger">Debe completar la Categoría</div>
+    </div>
+
+    <button type="submit" class="btn btn-success" [disabled]="!elementoForm.form.valid">Guardar</button>
+    <a routerLink="/Elementos/lista">Volver</a>
+</form>

@@ -11,44 +11,36 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
-var categoria_1 = require("./categoria");
+var categoria_1 = require("../categoria/categoria");
+var elemento_1 = require("./elemento");
 var app_service_1 = require("../app.service");
-var CategoriaEditarComponent = (function () {
-    function CategoriaEditarComponent(route, router, service) {
+var ElementoDetalleComponent = (function () {
+    function ElementoDetalleComponent(route, router, service) {
         this.route = route;
         this.router = router;
         this.service = service;
     }
-    CategoriaEditarComponent.prototype.getCategoria = function (id) {
+    ElementoDetalleComponent.prototype.getElemento = function (id) {
         var _this = this;
-        this.service.getOne('Categoria', id)
-            .then(function (categoria) { return _this.categoria = categoria; })
+        this.service.getOne('Elemento', id)
+            .then(function (elemento) { return _this.elemento = elemento; })
             .catch(function () { return alert('Error al consumir servicio'); });
     };
-    CategoriaEditarComponent.prototype.save = function (categoria) {
-        var _this = this;
-        this.service.update('Categoria', categoria)
-            .then(function (categoria) {
-            _this.categoria = categoria;
-            _this.router.navigate(['/Categorias/lista']);
-        })
-            .catch(function () { return alert('Error al consumir servicio'); });
-    };
-    CategoriaEditarComponent.prototype.ngOnInit = function () {
-        this.title = 'Editar';
-        this.categoria = new categoria_1.Categoria();
+    ElementoDetalleComponent.prototype.ngOnInit = function () {
+        this.elemento = new elemento_1.Elemento();
+        this.elemento.Categoria = new categoria_1.Categoria();
         var id = this.route.snapshot.paramMap.get('id');
-        this.getCategoria(+id);
+        this.getElemento(+id);
     };
-    CategoriaEditarComponent = __decorate([
+    ElementoDetalleComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
             providers: [app_service_1.Service],
-            templateUrl: './editar.component.html',
+            templateUrl: './detalle.component.html',
         }),
         __metadata("design:paramtypes", [router_1.ActivatedRoute, router_1.Router, app_service_1.Service])
-    ], CategoriaEditarComponent);
-    return CategoriaEditarComponent;
+    ], ElementoDetalleComponent);
+    return ElementoDetalleComponent;
 }());
-exports.CategoriaEditarComponent = CategoriaEditarComponent;
-//# sourceMappingURL=editar.component.js.map
+exports.ElementoDetalleComponent = ElementoDetalleComponent;
+//# sourceMappingURL=detalle.component.js.map

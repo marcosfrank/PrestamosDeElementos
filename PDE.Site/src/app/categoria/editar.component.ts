@@ -8,7 +8,7 @@ import { Service }                          from '../app.service';
     providers: [Service],
     templateUrl: './editar.component.html',
 })
-export class EditarCategoriaComponent implements OnInit {
+export class CategoriaEditarComponent implements OnInit {
     categoria: Categoria;
     title: string;
 

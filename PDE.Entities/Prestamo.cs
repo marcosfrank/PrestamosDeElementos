@@ -7,8 +7,10 @@ namespace PDE.Entities
     public class Prestamo : AbstractaEntidad
     {
         public DateTime? FechaDevolucion { get; set; }
+        [ForeignKey("ElementoId")]
         public virtual Elemento Elemento { get; set; }
         public long ElementoId { get; set; }
+        [ForeignKey("PersonaId")]
         public virtual Persona Persona { get; set; }
         public long PersonaId { get; set; }
 

@@ -10,21 +10,18 @@ namespace PDE.Site.Controllers
 
         public BaseController() { }
 
-        //public IEnumerable<TEntity> Get()
         public IHttpActionResult Get()
         {
             var list = Logic.GetAll();
             return Ok(list);
         }
 
-        //public TEntity Get(long id)
         public IHttpActionResult Get(long id)
         {
             var entity = Logic.GetOne(id);
             return Ok(entity);
         }
 
-        //public void Post([FromBody]TEntity entity)
         public IHttpActionResult Post([FromBody]TEntity entity)
         {
             if (ModelState.IsValid)
@@ -36,19 +33,17 @@ namespace PDE.Site.Controllers
             return BadRequest();
         }
 
-        //public void Put([FromBody]TEntity entity)
         public IHttpActionResult Put([FromBody]TEntity entity)
         {
             if (ModelState.IsValid)
             {
                 Logic.Update(entity);
-                return Ok();
+                return Ok(entity);
             }
 
             return BadRequest();
         }
 
-        //public void Delete(long id)
         public IHttpActionResult Delete(long id)
         {
             var result = Logic.Delete(id);

@@ -1,0 +1,20 @@
+﻿<h1 class="page-header">
+    Elementos <small>Eliminar</small>
+</h1>
+<h3>¿Esta seguro de querer eliminar este elemento?</h3>
+<div>
+    <dl class="dl-horizontal">
+        <dt>Descripción</dt>
+        <dd>{{ elemento.Descripcion }}</dd>
+        <dt>Categoría</dt>
+        <dd>{{ elemento.Categoria.Descripcion }}</dd>
+        <dt>Fecha de Creación</dt>
+        <dd>{{ elemento.FechaCreacion | date: 'dd/MM/yyyy' }}</dd>
+    </dl>
+    <form (ngSubmit)="delete(elemento)">
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            <a routerLink="/Elementos/lista">Volver</a>
+        </div>
+    </form>
+</div>

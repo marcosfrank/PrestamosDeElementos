@@ -45,7 +45,7 @@ export class Service<T> {
             body: JSON.stringify(entity),
             headers: this.headers
         })).toPromise()
-            .then(() => entity)
+            .then(response => response.json() as T)
             .catch(this.handleError);
     }
 

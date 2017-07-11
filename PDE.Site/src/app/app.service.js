@@ -51,7 +51,7 @@ var Service = (function () {
             body: JSON.stringify(entity),
             headers: this.headers
         })).toPromise()
-            .then(function () { return entity; })
+            .then(function (response) { return response.json(); })
             .catch(this.handleError);
     };
     Service.prototype.delete = function (url, id) {

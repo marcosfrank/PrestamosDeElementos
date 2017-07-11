@@ -10,35 +10,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var router_1 = require("@angular/router");
-var categoria_1 = require("./categoria");
 var app_service_1 = require("../app.service");
-var CategoriaDetalleComponent = (function () {
-    function CategoriaDetalleComponent(route, router, service) {
-        this.route = route;
-        this.router = router;
+var ElementoListaComponent = (function () {
+    function ElementoListaComponent(service) {
         this.service = service;
     }
-    CategoriaDetalleComponent.prototype.getCategoria = function (id) {
+    ElementoListaComponent.prototype.getElementos = function () {
         var _this = this;
-        this.service.getOne('Categoria', id)
-            .then(function (categoria) { return _this.categoria = categoria; })
+        this.service.getAll('Elemento')
+            .then(function (elementos) { return _this.elementos = elementos; })
             .catch(function () { return alert('Error al consumir servicio'); });
     };
-    CategoriaDetalleComponent.prototype.ngOnInit = function () {
-        this.categoria = new categoria_1.Categoria();
-        var id = this.route.snapshot.paramMap.get('id');
-        this.getCategoria(+id);
+    ElementoListaComponent.prototype.ngOnInit = function () {
+        this.getElementos();
     };
-    CategoriaDetalleComponent = __decorate([
+    ElementoListaComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
             providers: [app_service_1.Service],
-            templateUrl: './detalle.component.html',
+            templateUrl: './lista.component.html',
         }),
-        __metadata("design:paramtypes", [router_1.ActivatedRoute, router_1.Router, app_service_1.Service])
-    ], CategoriaDetalleComponent);
-    return CategoriaDetalleComponent;
+        __metadata("design:paramtypes", [app_service_1.Service])
+    ], ElementoListaComponent);
+    return ElementoListaComponent;
 }());
-exports.CategoriaDetalleComponent = CategoriaDetalleComponent;
-//# sourceMappingURL=detalle.component.js.map
+exports.ElementoListaComponent = ElementoListaComponent;
+//# sourceMappingURL=lista.component.js.map

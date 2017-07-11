@@ -11,28 +11,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var app_service_1 = require("../app.service");
-var ListaCategoriaComponent = (function () {
-    function ListaCategoriaComponent(categoriaService) {
+var CategoriaListaComponent = (function () {
+    function CategoriaListaComponent(categoriaService) {
         this.categoriaService = categoriaService;
     }
-    ListaCategoriaComponent.prototype.getCategorias = function () {
+    CategoriaListaComponent.prototype.getCategorias = function () {
         var _this = this;
         this.categoriaService.getAll('Categoria')
             .then(function (categorias) { return _this.categorias = categorias; })
             .catch(function () { return alert('Error al consumir servicio'); });
     };
-    ListaCategoriaComponent.prototype.ngOnInit = function () {
+    CategoriaListaComponent.prototype.ngOnInit = function () {
         this.getCategorias();
     };
-    ListaCategoriaComponent = __decorate([
+    CategoriaListaComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
             providers: [app_service_1.Service],
             templateUrl: './lista.component.html',
         }),
         __metadata("design:paramtypes", [app_service_1.Service])
-    ], ListaCategoriaComponent);
-    return ListaCategoriaComponent;
+    ], CategoriaListaComponent);
+    return CategoriaListaComponent;
 }());
-exports.ListaCategoriaComponent = ListaCategoriaComponent;
+exports.CategoriaListaComponent = CategoriaListaComponent;
 //# sourceMappingURL=lista.component.js.map

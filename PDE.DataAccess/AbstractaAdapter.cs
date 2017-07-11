@@ -7,7 +7,7 @@ namespace PDE.DataAccess
 {
     public abstract class AbstractaAdapter<TEntity> : IAdapter<TEntity> where TEntity : AbstractaEntidad
     {
-        public void Add(TEntity entity)
+        public virtual void Add(TEntity entity)
         {
             using (var db = new PDEContext())
             {
@@ -16,7 +16,7 @@ namespace PDE.DataAccess
             }
         }
 
-        public bool Delete(long id)
+        public virtual bool Delete(long id)
         {
             var result = false;
 
@@ -40,7 +40,7 @@ namespace PDE.DataAccess
             return result;
         }
 
-        public List<TEntity> GetAll()
+        public virtual List<TEntity> GetAll()
         {
             using (var db = new PDEContext())
             {
@@ -48,7 +48,7 @@ namespace PDE.DataAccess
             }
         }
 
-        public TEntity GetOne(long id)
+        public virtual TEntity GetOne(long id)
         {
             using (var db = new PDEContext())
             {
@@ -56,7 +56,7 @@ namespace PDE.DataAccess
             }
         }
 
-        public void Update(TEntity entity)
+        public virtual void Update(TEntity entity)
         {
             using (var db = new PDEContext())
             {
