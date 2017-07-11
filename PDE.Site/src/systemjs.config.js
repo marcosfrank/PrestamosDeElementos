@@ -13,7 +13,8 @@
       // our app is within the app folder
       'app': 'app',
 
-      // angular bundles
+        // angular bundles 
+      '@angular/animations': 'npm:@angular/animations/bundles/animations.umd.js',
       '@angular/core': 'npm:@angular/core/bundles/core.umd.js',
       '@angular/common': 'npm:@angular/common/bundles/common.umd.js',
       '@angular/compiler': 'npm:@angular/compiler/bundles/compiler.umd.js',
@@ -22,6 +23,8 @@
       '@angular/http': 'npm:@angular/http/bundles/http.umd.js',
       '@angular/router': 'npm:@angular/router/bundles/router.umd.js',
       '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
+      '@angular/material': 'npm:@angular/material/bundles/material.umd.js',
+      '@angular/cdk': 'npm:@angular/cdk/bundles/cdk.umd.js',
 
       // other libraries
       'rxjs': 'npm:rxjs'
