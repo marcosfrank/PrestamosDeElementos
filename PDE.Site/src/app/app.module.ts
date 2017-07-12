@@ -8,6 +8,7 @@ import { MenuComponent }              from './util/menu.component';
 import { CategoriaModule }            from './categoria/categoria.module';
 import { PersonaModule }              from './persona/persona.module';
 import { ElementoModule }             from './elemento/elemento.module';
+import { UsuarioModule }              from './usuario/usuario.module';
 
 import { CategoriaListaComponent }    from './categoria/lista.component';
 import { CategoriaDetalleComponent }  from './categoria/detalle.component';
@@ -27,6 +28,12 @@ import { ElementoEditarComponent }    from './elemento/editar.component';
 import { ElementoEliminarComponent }  from './elemento/eliminar.component';
 import { ElementoDetalleComponent }   from './elemento/detalle.component';
 
+import { UsuarioListaComponent }      from './usuario/lista.component';
+import { UsuarioCrearComponent }      from './usuario/crear.component';
+import { UsuarioEditarComponent }     from './usuario/editar.component';
+import { UsuarioEliminarComponent }   from './usuario/eliminar.component';
+import { UsuarioDetalleComponent }    from './usuario/detalle.component';
+
 const appRoutes: Routes = [
     { path: 'Categorias/lista',         component: CategoriaListaComponent },
     { path: 'Categorias/detalles/:id',  component: CategoriaDetalleComponent },
@@ -45,6 +52,12 @@ const appRoutes: Routes = [
     { path: 'Elementos/editar/:id',     component: ElementoEditarComponent },
     { path: 'Elementos/eliminar/:id',   component: ElementoEliminarComponent },
     { path: 'Elementos/detalles/:id',   component: ElementoDetalleComponent },
+
+    { path: 'Usuarios/lista',           component: UsuarioListaComponent },
+    { path: 'Usuarios/crear',           component: UsuarioCrearComponent },
+    { path: 'Usuarios/editar/:id',      component: UsuarioEditarComponent },
+    { path: 'Usuarios/eliminar/:id',    component: UsuarioEliminarComponent },
+    { path: 'Usuarios/detalles/:id',    component: UsuarioDetalleComponent },
     //{
     //    path: '',
     //    redirectTo: '/index.html',
@@ -54,7 +67,14 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-    imports:      [ BrowserModule, CategoriaModule, PersonaModule, ElementoModule, RouterModule.forRoot(appRoutes) ],
+    imports: [
+        BrowserModule,
+        CategoriaModule,
+        PersonaModule,
+        ElementoModule,
+        UsuarioModule,
+        RouterModule.forRoot(appRoutes)
+    ],
     declarations: [ AppComponent, MenuComponent ],
     bootstrap:    [ AppComponent ]
 })

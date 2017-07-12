@@ -1,0 +1,20 @@
+﻿<h1 class="page-header">
+    Usuarios <small>{{ title }}</small>
+</h1>
+<form (ngSubmit)="save(usuario)" #usuarioForm="ngForm">
+    <div class="form-group">
+        <label for="NombreUsuario">Nombre de Usuario</label>
+        <input type="text" class="form-control" id="NombreUsuario" required [(ngModel)]="usuario.NombreUsuario" name="NombreUsuario"
+               #NombreUsuario="ngModel">
+        <div [hidden]="NombreUsuario.valid || NombreUsuario.pristine" class="alert alert-danger">Debe completar el Nombre de Usuario</div>
+    </div>
+    <div class="form-group">
+        <label for="Contrasena">Contraseña</label>
+        <input type="password" class="form-control" id="Contrasena" required [(ngModel)]="usuario.Contrasena" name="Contrasena"
+               #Contrasena="ngModel" />
+        <div [hidden]="Contrasena.valid || Contrasena.pristine" class="alert alert-danger">Debe completar la Contraseña</div>
+    </div>
+
+    <button type="submit" class="btn btn-success" [disabled]="!usuarioForm.form.valid">Guardar</button>
+    <a routerLink="/Usuarios/lista">Volver</a>
+</form>
